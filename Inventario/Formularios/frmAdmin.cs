@@ -148,7 +148,8 @@ namespace Inventario.Formularios
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            // Lo programaremos despues.
+            frmAdminCategoria frm = new frmAdminCategoria();
+            frm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
