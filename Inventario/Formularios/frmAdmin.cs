@@ -165,5 +165,11 @@ namespace Inventario.Formularios
         {
             // No necesitamos codigo aqui por ahora.
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmAdminInventario frm = new frmAdminInventario();
+            frm.ShowDialog();
+        }
     }
 }
