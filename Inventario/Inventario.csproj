@@ -86,6 +86,12 @@
     <Compile Include="Formularios\frmAdminProducto.Designer.cs">
       <DependentUpon>frmAdminProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAdminProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAdminProveedor.Designer.cs">
+      <DependentUpon>frmAdminProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmEditCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAdminProducto.resx">
       <DependentUpon>frmAdminProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAdminProveedor.resx">
+      <DependentUpon>frmAdminProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEditCategoria.resx">
       <DependentUpon>frmEditCategoria.cs</DependentUpon>
