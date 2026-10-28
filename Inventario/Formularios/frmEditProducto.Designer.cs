@@ -92,18 +92,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(31, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Local";
+            this.label5.Text = "Proveedor";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(31, 291);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 16);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Proveedor";
+            this.label6.Text = "Categoría";
             // 
             // label7
             // 
@@ -137,9 +137,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(31, 396);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 16);
+            this.label10.Size = new System.Drawing.Size(40, 16);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Producto";
+            this.label10.Text = "Local";
             // 
             // button1
             // 
@@ -255,7 +255,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmEditProducto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditProducto";
             this.Load += new System.EventHandler(this.frmEditProducto_Load);
             this.ResumeLayout(false);

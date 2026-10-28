@@ -78,11 +78,37 @@ namespace Inventario.Formularios
             TListaProducto.Agregar(new Producto { Id = 5, Nombre = "Mouse Gamer", Precio = 18.75m, Stock = 15, IdCategoria = 2, IdProveedor = 5, IdLocal = 5, IdInventario = 5, Descripcion = "Mouse con sensor optico" });
         }
 
+
         private void MostrarProductos()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = TListaProducto.Listar();
+
+            var lista = TListaProducto.Listar()
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Nombre,
+                    p.Descripcion,
+                    p.Precio,
+                    p.Stock,
+
+                    Categoria = TListaCategoria.Listar()
+                        .FirstOrDefault(c => c.IdCategoria == p.IdCategoria)?.Nombre,
+
+                    Proveedor = TListaProveedor.Listar()
+                        .FirstOrDefault(pr => pr.IdProveedor == p.IdProveedor)?.Nombre,
+
+                    Local = TListaLocal.Listar()
+                        .FirstOrDefault(l => l.IdLocal == p.IdLocal)?.Nombre,
+
+                    Inventario = TListaInventario.Listar()
+                        .FirstOrDefault(i => i.IdInventario == p.IdInventario)?.Nombre
+                })
+                .ToList();
+
+            dataGridView1.DataSource = lista;
         }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -117,7 +143,7 @@ namespace Inventario.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmEditProducto frm = new frmEditProducto();
+            frmAdminProducto frm = new frmAdminProducto();
             frm.ShowDialog();
         }
         private void button2_Click(object sender, EventArgs e)

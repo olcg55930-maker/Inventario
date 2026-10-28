@@ -16,5 +16,10 @@ namespace Inventario.Formularios
         {
             InitializeComponent();
         }
+
+        private void frmEditCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

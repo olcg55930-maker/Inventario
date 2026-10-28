@@ -68,6 +68,12 @@
     <Compile Include="Formularios\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAdminProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAdminProducto.Designer.cs">
+      <DependentUpon>frmAdminProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmEditCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAdminProducto.resx">
+      <DependentUpon>frmAdminProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEditCategoria.resx">
       <DependentUpon>frmEditCategoria.cs</DependentUpon>
