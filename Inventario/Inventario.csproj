@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\TListaCategoria.cs" />
+    <Compile Include="Controlador\TListaProveedor.cs" />
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Inventario.cs" />
     <Compile Include="Entidades\Local.cs" />
