@@ -1,0 +1,40 @@
+# Especificación del proyecto: Inventario
+
+## 1. Objetivo
+Desarrollar un sistema de gestión de inventario en C# con Windows Forms, aplicando buenas prácticas de programación y control de versiones con Git y GitHub.
+
+## 2. Funcionalidades
+- Registrar productos.
+- Listar y buscar productos.
+- Modificar precios y cantidades.
+- Eliminar productos.
+- Administrar categorías, proveedores, locales e inventarios.
+- Validar que los precios y las cantidades no sean negativos.
+- Identificar productos con stock bajo.
+- Generar reportes utilizando LINQ.
+
+## 3. Entidades principales
+- Producto
+- Inventario
+- Local
+- Categoria
+- Proveedor
+
+## 4. Tecnología
+- Lenguaje: C#.
+- Interfaz: Windows Forms.
+- Control de versiones: Git.
+- Repositorio remoto: GitHub.
+- Pruebas automatizadas: xUnit.
+- Integración continua: GitHub Actions.
+
+## 5. Alcance inicial
+La primera versión almacenará los datos en listas en memoria. No utilizará una base de datos. Los datos se perderán al cerrar la aplicación.
+
+## 6. Criterios de aceptación
+- La aplicación debe compilar correctamente.
+- Las operaciones de productos deben funcionar.
+- Las validaciones deben impedir precios y cantidades negativos.
+- Los reportes LINQ deben mostrar resultados correctos.
+- Las pruebas automatizadas deben ejecutarse correctamente.
+- GitHub Actions debe comprobar la compilación y las pruebas.
