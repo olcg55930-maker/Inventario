@@ -68,10 +68,55 @@
     <Compile Include="Formularios\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmEditCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditCategoria.Designer.cs">
+      <DependentUpon>frmEditCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEditInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditInventario.Designer.cs">
+      <DependentUpon>frmEditInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEditLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditLocal.Designer.cs">
+      <DependentUpon>frmEditLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEditProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditProducto.Designer.cs">
+      <DependentUpon>frmEditProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEditProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditProveedor.Designer.cs">
+      <DependentUpon>frmEditProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditCategoria.resx">
+      <DependentUpon>frmEditCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditInventario.resx">
+      <DependentUpon>frmEditInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditLocal.resx">
+      <DependentUpon>frmEditLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditProducto.resx">
+      <DependentUpon>frmEditProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditProveedor.resx">
+      <DependentUpon>frmEditProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

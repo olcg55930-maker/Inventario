@@ -117,9 +117,9 @@ namespace Inventario.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Lo programaremos despues.
+            frmEditProducto frm = new frmEditProducto();
+            frm.ShowDialog();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             // Lo programaremos despues.
