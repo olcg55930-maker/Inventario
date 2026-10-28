@@ -49,6 +49,7 @@
     <Compile Include="Controlador\TListaCategoria.cs" />
     <Compile Include="Controlador\TListaInventario.cs" />
     <Compile Include="Controlador\TListaLocal.cs" />
+    <Compile Include="Controlador\TListaProducto.cs" />
     <Compile Include="Controlador\TListaProveedor.cs" />
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Inventario.cs" />
