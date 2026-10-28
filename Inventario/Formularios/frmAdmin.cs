@@ -174,5 +174,101 @@ namespace Inventario.Formularios
             frmAdminInventario frm = new frmAdminInventario();
             frm.ShowDialog();
         }
+
+        private void productosOrdenadosPorNombreOPrecioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reporte = TListaProducto.Listar()
+                .OrderBy(p => p.Nombre)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Nombre,
+                    p.Precio,
+                    p.Stock
+                })
+                .ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = reporte;
+        }
+
+        private void productosConStockBajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reporte = TListaProducto.Listar()
+                .Where(p => p.Stock <= 5)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Nombre,
+                    p.Stock,
+                    p.Precio
+                })
+                .ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = reporte;
+        }
+
+        private void productosAgrupadosPorCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reporte = from p in TListaProducto.Listar()
+                          join c in TListaCategoria.Listar()
+                          on p.IdCategoria equals c.IdCategoria
+                          orderby c.Nombre, p.Nombre
+                          select new
+                          {
+                              Categoria = c.Nombre,
+                              Producto = p.Nombre,
+                              p.Precio,
+                              p.Stock
+                          };
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = reporte.ToList();
+        }
+
+        private void valorTotalDelInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reporte = TListaProducto.Listar()
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Nombre,
+                    p.Precio,
+                    p.Stock,
+                    ValorTotal = p.Precio * p.Stock
+                })
+                .ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = reporte;
+
+            decimal total = TListaProducto.Listar()
+                .Sum(p => p.Precio * p.Stock);
+
+            MessageBox.Show(
+                "Valor total del inventario: $" + total.ToString("N2"),
+                "Reporte de inventario",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void productosAgrupadosPorProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reporte = from p in TListaProducto.Listar()
+                          join pr in TListaProveedor.Listar()
+                          on p.IdProveedor equals pr.IdProveedor
+                          orderby pr.Nombre, p.Nombre
+                          select new
+                          {
+                              Proveedor = pr.Nombre,
+                              Producto = p.Nombre,
+                              p.Precio,
+                              p.Stock
+                          };
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = reporte.ToList();
+        }
     }
 }

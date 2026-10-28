@@ -38,6 +38,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosConStockBajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosAgrupadosPorCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valorTotalDelInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosAgrupadosPorProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,19 +64,25 @@
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1019, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem,
+            this.productosConStockBajoToolStripMenuItem,
+            this.productosAgrupadosPorCategoríaToolStripMenuItem,
+            this.valorTotalDelInventarioToolStripMenuItem,
+            this.productosAgrupadosPorProveedorToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(121, 401);
+            this.button1.Location = new System.Drawing.Point(181, 523);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 23);
             this.button1.TabIndex = 2;
@@ -81,7 +92,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(262, 401);
+            this.button2.Location = new System.Drawing.Point(322, 523);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 23);
             this.button2.TabIndex = 3;
@@ -91,7 +102,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(386, 401);
+            this.button3.Location = new System.Drawing.Point(446, 523);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 23);
             this.button3.TabIndex = 4;
@@ -101,7 +112,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(534, 401);
+            this.button4.Location = new System.Drawing.Point(594, 523);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 23);
             this.button4.TabIndex = 5;
@@ -112,11 +123,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(77, 99);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(605, 253);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 407);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -131,7 +142,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(632, 401);
+            this.button5.Location = new System.Drawing.Point(720, 523);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 23);
             this.button5.TabIndex = 8;
@@ -139,11 +150,46 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // productosOrdenadosPorNombreOPrecioToolStripMenuItem
+            // 
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem.Name = "productosOrdenadosPorNombreOPrecioToolStripMenuItem";
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem.Size = new System.Drawing.Size(375, 26);
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem.Text = "Productos ordenados por nombre o precio";
+            this.productosOrdenadosPorNombreOPrecioToolStripMenuItem.Click += new System.EventHandler(this.productosOrdenadosPorNombreOPrecioToolStripMenuItem_Click);
+            // 
+            // productosConStockBajoToolStripMenuItem
+            // 
+            this.productosConStockBajoToolStripMenuItem.Name = "productosConStockBajoToolStripMenuItem";
+            this.productosConStockBajoToolStripMenuItem.Size = new System.Drawing.Size(375, 26);
+            this.productosConStockBajoToolStripMenuItem.Text = "Productos con stock bajo";
+            this.productosConStockBajoToolStripMenuItem.Click += new System.EventHandler(this.productosConStockBajoToolStripMenuItem_Click);
+            // 
+            // productosAgrupadosPorCategoríaToolStripMenuItem
+            // 
+            this.productosAgrupadosPorCategoríaToolStripMenuItem.Name = "productosAgrupadosPorCategoríaToolStripMenuItem";
+            this.productosAgrupadosPorCategoríaToolStripMenuItem.Size = new System.Drawing.Size(375, 26);
+            this.productosAgrupadosPorCategoríaToolStripMenuItem.Text = "Productos agrupados por categoría";
+            this.productosAgrupadosPorCategoríaToolStripMenuItem.Click += new System.EventHandler(this.productosAgrupadosPorCategoríaToolStripMenuItem_Click);
+            // 
+            // valorTotalDelInventarioToolStripMenuItem
+            // 
+            this.valorTotalDelInventarioToolStripMenuItem.Name = "valorTotalDelInventarioToolStripMenuItem";
+            this.valorTotalDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(375, 26);
+            this.valorTotalDelInventarioToolStripMenuItem.Text = "Valor total del inventario";
+            this.valorTotalDelInventarioToolStripMenuItem.Click += new System.EventHandler(this.valorTotalDelInventarioToolStripMenuItem_Click);
+            // 
+            // productosAgrupadosPorProveedorToolStripMenuItem
+            // 
+            this.productosAgrupadosPorProveedorToolStripMenuItem.Name = "productosAgrupadosPorProveedorToolStripMenuItem";
+            this.productosAgrupadosPorProveedorToolStripMenuItem.Size = new System.Drawing.Size(375, 26);
+            this.productosAgrupadosPorProveedorToolStripMenuItem.Text = "Productos agrupados por proveedor";
+            this.productosAgrupadosPorProveedorToolStripMenuItem.Click += new System.EventHandler(this.productosAgrupadosPorProveedorToolStripMenuItem_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1019, 572);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
@@ -177,5 +223,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ToolStripMenuItem productosOrdenadosPorNombreOPrecioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosConStockBajoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosAgrupadosPorCategoríaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem valorTotalDelInventarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosAgrupadosPorProveedorToolStripMenuItem;
     }
 }
