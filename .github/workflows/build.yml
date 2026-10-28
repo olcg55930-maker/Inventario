@@ -1,0 +1,42 @@
+
+name: Compilar Inventario
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Configurar NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Localizar solucion
+        id: solution
+        shell: pwsh
+        run: |
+          $sln = Get-ChildItem -Path . -Filter *.sln -Recurse |
+            Select-Object -First 1
+
+          if (-not $sln) {
+            throw "No se encontro ningun archivo .sln"
+          }
+
+          "path=$($sln.FullName)" >> $env:GITHUB_OUTPUT
+
+      - name: Restaurar paquetes
+        run: nuget restore "${{ steps.solution.outputs.path }}"
+
+      - name: Compilar solucion
+        run: msbuild "${{ steps.solution.outputs.path }}" /p:Configuration=Release
