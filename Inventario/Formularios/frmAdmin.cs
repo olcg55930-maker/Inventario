@@ -160,7 +160,8 @@ namespace Inventario.Formularios
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Lo programaremos despues.
+            frmAdminLocal frm = new frmAdminLocal();
+            frm.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
